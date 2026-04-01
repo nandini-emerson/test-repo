@@ -1,0 +1,11 @@
+[
+  {
+    "id": "test_1",
+    "name": "test_error_handling",
+    "description": "Test: test_error_handling",
+    "type": "functional",
+    "status": "failed",
+    "duration": 0.0,
+    "error": "self = <test_agent.TestAgent object at 0x000002388EB11F50>\nmock_agent = <MagicMock id='2441935548816'>\n\n    @pytest.mark.asyncio\n    async def test_basic_message_processing(self, mock_agent):\n        \"\"\"Test basic message processing\"\"\"\n        mock_agent.process_message = MagicMock(return_value=\"Response\")\n>       response = await mock_agent.process_message(\"Hello!\")\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       TypeError: object str can't be used in 'await' expression\n\ntest_agent.py:18: TypeError"
+  }
+]
