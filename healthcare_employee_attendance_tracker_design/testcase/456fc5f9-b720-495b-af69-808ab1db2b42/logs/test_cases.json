@@ -1,0 +1,11 @@
+[
+  {
+    "id": "test_1",
+    "name": "Record Attendance - Functional Success",
+    "description": "Test: Record Attendance - Functional Success",
+    "type": "functional",
+    "status": "passed",
+    "duration": 0.0,
+    "error": null
+  }
+]
