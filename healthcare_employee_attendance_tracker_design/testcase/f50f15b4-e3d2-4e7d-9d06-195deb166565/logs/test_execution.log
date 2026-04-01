@@ -1,0 +1,42 @@
+=== PYTEST EXECUTION LOG ===
+
+Exit Code: 1
+
+STDOUT:
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\VBHASK~1\AppData\Local\Temp\aba_venv_cache\venv_cd37e5a7c9e28e41cc7744f98d0b25d8\Scripts\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.9', 'Platform': 'Windows-10-10.0.22631-SP0', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'anyio': '4.12.1', 'asyncio': '1.3.0', 'json-report': '1.5.0', 'metadata': '3.1.1'}, 'JAVA_HOME': 'C:\\Program Files\\Java\\jdk-11'}
+rootdir: C:\Users\VBHASK~1\AppData\Local\Temp\test_venv_exec_w52n6y1g
+configfile: pytest.ini
+plugins: anyio-4.12.1, asyncio-1.3.0, json-report-1.5.0, metadata-3.1.1
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 3 items
+
+test_agent.py::TestAgent::test_agent_initialization PASSED               [ 33%]
+test_agent.py::TestAgent::test_basic_message_processing FAILED           [ 66%]
+test_agent.py::TestAgent::test_agent_has_attributes PASSED               [100%]
+
+================================== FAILURES ===================================
+___________________ TestAgent.test_basic_message_processing ___________________
+
+self = <test_agent.TestAgent object at 0x000002388EB11F50>
+mock_agent = <MagicMock id='2441935548816'>
+
+    @pytest.mark.asyncio
+    async def test_basic_message_processing(self, mock_agent):
+        """Test basic message processing"""
+        mock_agent.process_message = MagicMock(return_value="Response")
+>       response = await mock_agent.process_message("Hello!")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: object str can't be used in 'await' expression
+
+test_agent.py:18: TypeError
+--------------------------------- JSON report ---------------------------------
+report saved to: C:\Users\VBHASK~1\AppData\Local\Temp\test_venv_exec_w52n6y1g\pytest_report.json
+=========================== short test summary info ===========================
+FAILED test_agent.py::TestAgent::test_basic_message_processing - TypeError: o...
+========================= 1 failed, 2 passed in 0.30s =========================
+
+
+STDERR:
