@@ -1,0 +1,19 @@
+{
+  "name": "Generate Attendance Report - Integration with Report Generator",
+  "description": "Ensures that the /attendance/report endpoint integrates with the report generator API and returns a report URL for valid input.",
+  "test_type": "integration",
+  "input": "POST to /attendance/report with valid JSON (date_range, department) and valid Authorization header.",
+  "output": "JSON response with 'report_url' and success message.",
+  "success_criteria": [
+    "HTTP status is 200",
+    "response['success'] is True",
+    "response['status'] == 'success'",
+    "response contains 'report_url'",
+    "response['message'] contains 'Attendance report for'"
+  ],
+  "error_scenarios": [
+    "Report generator API returns error",
+    "Invalid department or date_range",
+    "Authentication failure"
+  ]
+}
