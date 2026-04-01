@@ -1,0 +1,11 @@
+{
+  "name": "test_basic_functionality",
+  "description": "Basic functionality test",
+  "test_type": "functional",
+  "input": null,
+  "output": null,
+  "success_criteria": [
+    "response is not None"
+  ],
+  "error_scenarios": null
+}
