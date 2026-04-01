@@ -1,0 +1,19 @@
+{
+  "name": "Record Attendance - Functional Success",
+  "description": "Validates that the /attendance/record endpoint successfully records attendance for a valid employee, shift, and date with proper authentication.",
+  "test_type": "functional",
+  "input": "POST to /attendance/record with valid JSON body (employee_id, date, shift_id) and valid Authorization header.",
+  "output": "JSON response indicating success, with status 'success' and a confirmation message.",
+  "success_criteria": [
+    "HTTP status is 200",
+    "response['success'] is True",
+    "response['status'] == 'success'",
+    "response['message'] contains 'Attendance for employee'"
+  ],
+  "error_scenarios": [
+    "Invalid employee_id",
+    "Invalid shift assignment",
+    "Authentication failure",
+    "HRIS API failure"
+  ]
+}
