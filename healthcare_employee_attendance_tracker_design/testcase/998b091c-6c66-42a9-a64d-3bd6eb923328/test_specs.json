@@ -1,0 +1,18 @@
+{
+  "name": "Detect Anomalies - Functional Input Validation",
+  "description": "Checks that /attendance/anomaly endpoint returns validation errors for malformed or missing input fields.",
+  "test_type": "functional",
+  "input": "POST to /attendance/anomaly with missing or malformed 'date_range' or 'department' fields.",
+  "output": "JSON error response with type 'ERR_INPUT_VALIDATION'.",
+  "success_criteria": [
+    "HTTP status is 422",
+    "response['success'] is False",
+    "response['error']['type'] == 'ERR_INPUT_VALIDATION'",
+    "response['error']['message'] contains validation error details"
+  ],
+  "error_scenarios": [
+    "Missing date_range",
+    "Malformed department",
+    "Malformed JSON"
+  ]
+}
