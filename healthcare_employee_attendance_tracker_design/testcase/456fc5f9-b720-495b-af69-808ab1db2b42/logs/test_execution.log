@@ -1,0 +1,27 @@
+=== PYTEST EXECUTION LOG ===
+
+Exit Code: 0
+
+STDOUT:
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\VBHASK~1\AppData\Local\Temp\test_venv_exec_5okyulv7\venv\Scripts\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.9', 'Platform': 'Windows-10-10.0.22631-SP0', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'anyio': '4.12.1', 'asyncio': '1.3.0', 'json-report': '1.5.0', 'metadata': '3.1.1'}, 'JAVA_HOME': 'C:\\Program Files\\Java\\jdk-11'}
+rootdir: C:\Users\VBHASK~1\AppData\Local\Temp\test_venv_exec_5okyulv7
+configfile: pytest.ini
+plugins: anyio-4.12.1, asyncio-1.3.0, json-report-1.5.0, metadata-3.1.1
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 5 items
+
+test_agent.py::test_record_attendance_functional_success PASSED          [ 20%]
+test_agent.py::test_record_attendance_functional_errors[payload0-headers0-400-Invalid employee_id] PASSED [ 40%]
+test_agent.py::test_record_attendance_functional_errors[payload1-headers1-400-Invalid shift assignment] PASSED [ 60%]
+test_agent.py::test_record_attendance_functional_errors[payload2-headers2-401-Authentication failed] PASSED [ 80%]
+test_agent.py::test_record_attendance_functional_errors[payload3-headers3-502-HRIS API failure] PASSED [100%]
+
+--------------------------------- JSON report ---------------------------------
+report saved to: C:\Users\VBHASK~1\AppData\Local\Temp\test_venv_exec_5okyulv7\pytest_report.json
+============================== 5 passed in 0.42s ==============================
+
+
+STDERR:
