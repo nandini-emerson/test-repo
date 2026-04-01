@@ -1,0 +1,13 @@
+{
+  "name": "test_error_handling",
+  "description": "Test error handling",
+  "test_type": "functional",
+  "input": null,
+  "output": null,
+  "success_criteria": [
+    "error is handled gracefully"
+  ],
+  "error_scenarios": [
+    "API error"
+  ]
+}
